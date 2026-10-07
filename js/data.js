@@ -2,53 +2,64 @@ const state = {
 
     // Mainly placeholder data
 
-    userName: "User",
+    userName: "Kaleb",
+    fullName: "Kaleb Cox",
     pin: "1234",
+    email: "kaleb.cox@example.com",
 
-    date: "Day, Date Month",
+    date: "Thursday, 8th October",
 
     identities: [
-    { id: "Identity1", name: "Identity 1", subtitle: "Subtitle 1", colour: "mint",
+    { id: "personal", name: "Personal", subtitle: "Everyday money and bills", colour: "mint",
         accounts: [
-        { id: "account1", name: "Account 1", last4: "1234", balance: 1234.56 },
-        { id: "account2",    name: "Account 2",    last4: "9032", balance: 789.10 } ] },
-    { id: "Identity2", name: "Identity 2", subtitle: "Subtitle 2", colour: "lavender",
+        { id: "everyday", name: "Everyday", last4: "1234", balance: 1234.56 },
+        { id: "bills",    name: "Bills",    last4: "9032", balance: 789.10 } ] },
+    { id: "business", name: "Business", subtitle: "CraftyCarp", colour: "lavender",
         accounts: [
-        { id: "account3", name: "Account 3", last4: "5678", balance: 1112.13 },
-        { id: "account4",    name: "Account 4",    last4: "9032", balance: 141.51 } ] },
-    { id: "Identity3", name: "Identity 3", subtitle: "Subtitle 3", colour: "mint",
-        accounts: [
-        { id: "account5", name: "Account 5", last4: "9101", balance: 6171.81 },
-        { id: "account6",    name: "Account 6",    last4: "9032", balance: 920.21 } ] }
+        { id: "main", name: "Main account", last4: "5678", balance: 1112.13 },
+        { id: "tax", name: "Tax account", last4: "9032", balance: 141.51 } ] },
     ],
 
-    pendingIncome: { label: "Name", amount: 1234.56, accountId: "account1" },
+    pendingIncome: { label: "Custom job invoice", amount: 6543.21, accountId: "everyday" },
     incomeDismissed: false,
 
     split: [
-    { name: "Split 1",  pct: 30 },
-    { name: "Split 2",  pct: 20 },
-    { name: "Split 3",  pct: 15 },
-    { name: "Split 4",  pct: 10 },
-    { name: "Split 5",  pct: 25 }
+    { name: "Materials",  pct: 30 },
+    { name: "Expenses",  pct: 20 },
+    { name: "Tax",  pct: 15 },
+    { name: "Safety net", pct: 10 },
+    { name: "Pay",  pct: 25 }
     ],
 
     allocations: {},
 
     goals: [
-    { id: 1, name: "Goal 1", current: 100, target: 1000 }
+    { id: 1, name: "New work vehicle", current: 8420, target: 12000,
+      savedToday: 10, savedWeek: 120, savedMonth: 620 } 
     ],
 
     transactions: [
-    { name: "Recent1",       date: "Date", amount: -12.34 },
-    { name: "Recent2",       date: "Date", amount: -56.78 },
-    { name: "Recent3",         date: "Date", amount: 910.11 },
-    { name: "Recent4",      date: "Date", amount: -121.31 },
-    { name: "Recent5",     date: "Date", amount: -415.16 },
+    { name: "Netflix",       date: "7 Oct", amount: -12.34 },
+    { name: "Bunnings",       date: "6 Oct", amount: -56.78 },
+    { name: "Wages",         date: "6 Oct", amount: 910.11 },
+    { name: "Z Energy",      date: "4 Oct", amount: -121.31 },
+    { name: "Countdown",     date: "3 Oct", amount: -415.16 },
+    ],
+
+    // Security alert shown on Home and alerts screen
+    securityAlert: { title: "New login detected", detail: "Unknown device - Christchurch - 10:11 am" },
+
+    // Security settings
+    security: { twoFactor: false, loginAlerts: true, faceId: true },
+
+    // Recent logins for the settings screen
+    logins: [
+        { device: "iPhone (this device)", place: "Tauranga", time: "Today" },
+        { device: "Chrome on Windows",    place: "Tauranga", time: "3 Oct" }
     ],
 
     connected: [
-    { name: "Bank 1", detail: "2 accounts", on: true },
-    { name: "Bank 2", detail: "1 account", on: true }
+    { name: "Kiwibank", detail: "2 accounts", on: true },
+    { name: "BNZ", detail: "1 account", on: true }
     ]
 };

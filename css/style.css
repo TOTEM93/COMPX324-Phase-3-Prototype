@@ -57,9 +57,9 @@ body { background: var(--page-bg); display: flex; align-items: center; justify-c
 .card.mint { background: var(--mint); }
 .card.lavender { background: var(--lavender); }
 .big { font-size: 34px; font-weight: 600; margin: 6px 0; }
-.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #e11d48; }
+.dot { display: inline-block; border-radius: 50%; background: #e11d48; }
 
-/* Buttons / inputs */
+/* Buttons and inputs */
 
 .btn { width: 100%; padding: 14px; border: none; border-radius: 14px; font-size: 16px; font-weight: 600; cursor: pointer; background: var(--mint-dark); color: #fff; }
 .btn.light { background: var(--card); color: var(--text); border: 1px solid var(--grey); }
@@ -81,3 +81,23 @@ input[type=range] { width: 100%; accent-color: var(--mint-dark); }
 .pins { display: flex; justify-content: center; gap: 14px; margin: 16px 0; }
 .pins span { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--mint-dark); }
 .pins span.full { background: var(--mint-dark); }
+
+/* Bar variant for lavender cards (used on the account pay-split bars) */
+
+.bar.lav > div { background: var(--lavender-dark); }
+
+/* Bell icon */
+
+.bell { position: relative; display: flex; align-items: center; justify-content: center; color: var(--text); }
+.bell .dot { position: absolute; top: 8px; right: 9px; width: 11px; height: 11px; border: 2px solid var(--bg); }
+
+/* Milestones */
+
+.milestone { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 14px; background: var(--grey); color: var(--muted); }
+.milestone.done { background: var(--lavender); color: var(--text); }
+
+/* Security  */
+
+.card.alert { background: #fee2e2; }
+.card.ok { background: var(--mint); }
+input[type=checkbox] { width: 22px; height: 22px; accent-color: var(--mint-dark); }
